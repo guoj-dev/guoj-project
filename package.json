@@ -1,0 +1,13 @@
+{
+  "name": "guoj-project",
+  "license": "AGPL-3.0-only",
+  "packageManager": "bun@1.1.17",
+  "scripts": {
+    "dev": "bun run --filter=\"@guoj/*\" dev"
+  },
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
