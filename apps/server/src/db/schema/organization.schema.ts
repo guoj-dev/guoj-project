@@ -21,10 +21,10 @@ export const organizations = pgTable("organization", {
 export const organizationMember = pgTable(
     "organization_member",
     {
-        userId: integer("user_id")
+        userId: uuid("user_id")
             .notNull()
             .references(() => users.id),
-        organizationId: integer("organization_id")
+        organizationId: uuid("organization_id")
             .notNull()
             .references(() => users.id),
         organizationRole: organizationRole("organization_role")
