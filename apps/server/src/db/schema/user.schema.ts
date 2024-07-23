@@ -77,7 +77,7 @@ export const userProfiles = pgTable("user_profiles", {
 });
 
 export const sessions = pgTable("sessions", {
-    id: uuid("id").primaryKey().defaultRandom(),
+    id: uuid("id").primaryKey(),
     userId: uuid("user_id")
         .notNull()
         .references(() => users.id),

@@ -23,7 +23,7 @@ const user = useElysia({ prefix: "user" })
     },
     {
       params: t.Object({
-        id: t.Numeric(),
+        id: t.String(),
       }),
       tags: ["user"],
     },

@@ -64,7 +64,7 @@ const auth = useElysia({ prefix: "auth" })
         password: t.String(),
       }),
       response: t.Object({
-        id: t.Number(),
+        id: t.String(),
         email: t.String(),
         name: t.String(),
       }),
@@ -179,7 +179,7 @@ const auth = useElysia({ prefix: "auth" })
         }),
       }),
       response: t.Object({
-        id: t.Numeric(),
+        id: t.String(),
         email: t.String(),
         name: t.String(),
       }),
