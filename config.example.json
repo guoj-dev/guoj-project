@@ -1,0 +1,15 @@
+{
+    "PROD": false,
+
+    "DATABASE_URL": "",
+
+    "BACKEND_HOST": "",
+
+    "BACKEND_PORT": 3001,
+
+    "FRONTEND_HOST": "",
+
+    "FRONTEND_PORT": 3000,
+
+    "API_PREFIX": "api"
+}
