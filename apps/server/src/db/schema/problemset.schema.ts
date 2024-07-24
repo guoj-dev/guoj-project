@@ -36,6 +36,7 @@ Permissions:
 
 export const problems = pgTable("problems", {
     id: uuid("id").primaryKey().defaultRandom(), //global id
+    prefix: text("prefix"),
     problemid: integer("pid"),
     name: text("name"),
     config: json("config"),
