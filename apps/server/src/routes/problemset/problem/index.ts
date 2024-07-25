@@ -10,17 +10,21 @@ export const problem = useElysia({ prefix: "problem" }).get(
     "/:id",
     async ({ params: { id }, logger }) => {
         const idSchema = z.string().uuid();
-        if (idSchema.safeParse(id).success) {
-            const problem = db.query.problems.findFirst({
-                where: eq(problems.id, id),
-            });
-            if (problem) return problem;
-            else throw new NotFoundException("Problem not found.");
-        } else {
-            const [prefix, digit] = id.split("-");
-            const problem = await db.select().from(problemsets).rightJoin(problems, and(eq(problemsets.id, problems.problemsetId), eq(problemsets.prefix, prefix), eq(problems.problemid, Number(digit))));
-            if (problem) return problem;
-            else throw new NotFoundException("Problem not found.");
+        try {
+            if (idSchema.safeParse(id).success) {
+                const problem = db.query.problems.findFirst({
+                    where: eq(problems.id, id),
+                });
+                if (problem) return problem;
+                else throw new NotFoundException("Problem not found.");
+            } else {
+                const [prefix, digit] = id.split("-");
+                const problem = await db.select().from(problemsets).rightJoin(problems, and(eq(problemsets.id, problems.problemsetId), eq(problemsets.prefix, prefix), eq(problems.problemid, Number(digit))));
+                if (problem) return problem;
+                else throw new NotFoundException("Problem not found.");
+            }
+        } catch {
+            throw new NotFoundException("Problem not found.");
         }
     },
     {
