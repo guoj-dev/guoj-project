@@ -4,7 +4,7 @@ import { db } from "@/db";
 import { NotFoundException } from "@/plugins/error/exceptions";
 import { z } from "zod";
 import { eq, and } from "drizzle-orm";
-import { problems } from "@/db/schema";
+import { problems, problemsets } from "@/db/schema";
 
 export const problem = useElysia({ prefix: "problem" }).get(
     "/:id",
@@ -18,9 +18,7 @@ export const problem = useElysia({ prefix: "problem" }).get(
             else throw new NotFoundException("Problem not found.");
         } else {
             const [prefix, digit] = id.split("-");
-            const problem = db.query.problems.findFirst({
-                where: and(eq(problems.prefix, prefix), eq(problems.problemid, Number(digit))),
-            });
+            const problem = await db.select().from(problemsets).rightJoin(problems, and(eq(problemsets.id, problems.problemsetId), eq(problemsets.prefix, prefix), eq(problems.problemid, Number(digit))));
             if (problem) return problem;
             else throw new NotFoundException("Problem not found.");
         }

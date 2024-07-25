@@ -36,7 +36,7 @@ Permissions:
 
 export const problems = pgTable("problems", {
     id: uuid("id").primaryKey().defaultRandom(), //global id
-    prefix: text("prefix"),
+    problemsetId: uuid("problemset_id").references(() => problemsets.id, {onDelete: "cascade"}),
     problemid: integer("pid"),
     name: text("name"),
     config: json("config"),
@@ -65,7 +65,10 @@ export const problemCollaborations = pgTable("problem_collaborations", {
 });
 
 export const problemRelations = relations(problems, ({ one, many }) => ({
-    problemToProblemSet: many(problemsets),
+    problemToProblemSet: one(problemsets, {
+        fields: [problems.problemsetId],
+        references: [problemsets.id]
+    }),
     problemTags: many(problemTags),
     problemCollaborations: many(problemCollaborations),
     submissions: many(submissions)
@@ -98,4 +101,5 @@ export const problemsetRelations = relations(problemsets, ({ one, many }) => ({
         references: [organizations.id],
     }),
     problemsetCollaborations: many(problemsetCollaborations),
+    problems: many(problems)
 }));
