@@ -165,7 +165,7 @@ initUnocssRuntime({
                                 </ul>
                             </NavigationMenuContent>
                         </NavigationMenuItem>
-                        <NavigationMenuItem>
+                        <NavigationMenuItem class=" hidden lg:block">
                             <NavigationMenuLink :class="navigationMenuTriggerStyle()" href="/">Contests
                             </NavigationMenuLink>
                         </NavigationMenuItem>
@@ -173,7 +173,8 @@ initUnocssRuntime({
 
                 </NavigationMenu>
                 <div class="flex flex-1 items-center justify-between space-x-2 md:justify-end h-8">
-                    <div class="relative"><Input id="name" placeholder="Search here" class="global-search"></Input>
+                    <div class="relative hidden lg:block"><Input id="name" placeholder="Search here"
+                            class="global-search"></Input>
                         <kbd class="command-key">
                             <span class="text-xs">⌘</span>+ /</kbd>
                     </div>
