@@ -52,7 +52,7 @@ MCV, or `Minimum Container Vehicle` is the minimum unit of the judge system. It 
 
 `Judge@Home`, is a distributed judge unit manager. The judge server need a lot of resources. We define a "judge client" is a `Judge@Home` instance with several MCV judge client in the main server. User can register a judge account and connect their self-host `Judge@Home` instance to the server. You can select the judge strategy, to only receive your private judge session for better performance or applying special configuration, or register as a global judge instance. If you are working as a global instance, you must be certified to join the default judge queue, or you will be a selectable judge instance for all users. We want to make sure the performance and validity of the global judge sessions, so we need to put more efforts on this. So this project will begin later and must be tested to be put in production.
 
-### Project N - The Judge Network Center 🌐🗺️
+<!---### Project N - The Judge Network Center 🌐🗺️
 
 **_🚧🚧This part is currently WIP, will be finished later, needs more time and suggestions.🚧🚧_**
 
@@ -79,6 +79,7 @@ MCV, or `Minimum Container Vehicle` is the minimum unit of the judge system. It 
 ## How to contribute ✊
 
 **_🚧🚧This part is currently WIP, will be finished later.🚧🚧_**
+-->
 
 ## License 📋
 
