@@ -18,9 +18,13 @@
                     筛选
                 </h1>
                 <div class="flex mx-4">
-                    <div>
+                    <div class="mr-2">
                         <Input placeholder="关键词" />
                     </div>
+                    <div class="mr-2">
+                        <Input placeholder="标签" />
+                    </div>
+                    <div><Button>确定</Button></div>
                 </div>
             </div>
         </div>
