@@ -8,6 +8,29 @@ interface user {
     username: string;
     email: string;
 }
+/**
+ * Defines the authentication store using Pinia.
+ * 
+ * This store manages user authentication state, including login, logout, and session refresh functionalities.
+ * It interacts with a backend API to authenticate users and maintains their session state.
+ * 
+ * @module authStore
+ * @property {Ref<boolean>} isAuthed - A reactive reference indicating whether the user is authenticated.
+ * @property {Ref<string>} username - A reactive reference holding the username of the authenticated user.
+ * @property {Ref<string>} email - A reactive reference holding the email of the authenticated user.
+ * @property {Function} login - An asynchronous function to handle user login.
+ * @property {Function} logout - An asynchronous function to handle user logout.
+ * @property {Function} refresh - An asynchronous function to refresh the user's session state.
+ * 
+ * @example
+ * // Usage example
+ * const authStore = useAuthStore();
+ * await authStore.login('user', 'password');
+ * if (authStore.isAuthed) {
+ *   console.log(`Logged in as ${authStore.username}`);
+ * }
+ */
+
 
 export const useAuthStore = defineStore("authStore", () => {
     const isAuthed = ref(false);

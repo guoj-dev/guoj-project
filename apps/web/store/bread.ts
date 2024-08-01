@@ -28,6 +28,13 @@ export interface BreadCustom {
 
 export type Bread = BreadNormal | BreadCustom;
 
+/**
+ * Defines a Pinia store for managing bread notifications.
+ * 
+ * This store includes functionality to create, push, and manage different types of bread notifications
+ * with customizable icons, titles, contents, colors, and durations. It also provides computed properties
+ * to access the list of bread notifications.
+ */
 export const useBreadStore = defineStore("breadStore", () => {
     const breadList = ref<Bread[]>([]);
 
