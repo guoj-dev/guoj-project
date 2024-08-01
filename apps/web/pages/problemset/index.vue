@@ -1,9 +1,7 @@
 <template>
     <div class="container mt-8 flex flex-col h-full flex-grow">
-
         <div class="flex flex-row">
-            <a
-                class="flex mr-4 h-full max-w-20vw w-full select-none flex-col justify-end rounded-md shadow-md bg-gradient-to-b from-muted-50 to-muted p-6 no-underline outline-none focus:shadow-md from-slate-500 to-gray">
+            <a class="flex mr-4 h-full max-w-20vw w-full select-none flex-col justify-end rounded-md shadow-md bg-gradient-to-b from-muted-50 to-muted p-6 no-underline outline-none focus:shadow-md from-slate-500 to-gray">
                 <img src="/logo.svg" class="h-12 w-12">
                 <div class="mb-2 mt-4 text-lg font-medium">
                     Main Problem Set
@@ -12,16 +10,16 @@
                     Selected by GuOJ members, free to play.
                 </p>
             </a>
-            <div class="flex flex-grow rounded-md border shadow-md pa-4">
-                <h1 class="font-bold text-xl mr-4">
-                    <Icon name="fluent:search-sparkle-16-filled" class="text-size-xl" />
+            <div class="flex flex-grow rounded-md border shadow-md p-4">
+                <h1 class="font-bold text-xl mr-4 flex">
+                    <Icon name="fluent:search-sparkle-16-filled" class="text-size-xl mr-2" />
                     筛选
                 </h1>
-                <div class="flex mx-4">
-                    <div class="mr-2">
+                <div class="flex flex-wrap mx-4">
+                    <div class="mr-2 mb-2">
                         <Input placeholder="关键词" />
                     </div>
-                    <div class="mr-2">
+                    <div class="mr-2 mb-2">
                         <Input placeholder="标签" />
                     </div>
                     <div><Button>确定</Button></div>
