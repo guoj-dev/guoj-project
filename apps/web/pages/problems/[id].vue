@@ -12,7 +12,14 @@
                     </span>
                 </div>
                 <div class="mt-4 flex">
-                    <div class="pa-2 rounded-xl min-h-2rem min-w-8rem bg-gradient-to-b from-blue-300 to-cyan-300 shadow-md flex items-center justify-center">
+                    <div class="pa-2 rounded-xl min-h-2rem min-w-8rem shadow-md flex items-center justify-center">
+                        <Avatar></Avatar>
+                        <div class="block ml-2">
+                            <p class="text-xl font-black">User</p>
+                            <p class="text-sm">Authorized Writer</p>
+                        </div>
+                    </div>
+                    <div class="pa-2 ml-2 rounded-xl min-h-2rem min-w-8rem bg-gradient-to-b from-blue-300 to-cyan-300 shadow-md flex items-center justify-center">
                         <Icon name="fluent:clock-bill-16-filled" class="text-3xl left-1rem bg-gradient-to-br from-zinc-100 to-slate-200"></Icon>
                         <span class="ml-2 bottom-.5rem right-.5rem text-xl font-black text-primary-foreground">Time: 1000ms</span>
                     </div>
