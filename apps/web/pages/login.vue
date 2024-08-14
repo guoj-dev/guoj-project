@@ -44,7 +44,7 @@
             </div>
             <div class="absolute back-btn-container p-8">
 
-                <Button variant="outline" size="icon" v-on:click="back">
+                <Button variant="outline" size="icon" v-on:click="navigateTo('/')">
                     <Icon name="mdi-chevron-right" class="text-xl" />
                 </Button>
             </div>

@@ -45,7 +45,7 @@
         </div>
         <div v-else>
             <div class="flex">
-                <Button class="h-8 w-16" variant="ghost" v-on:click="toLogin">Login</Button>
+                <Button class="h-8 w-16" variant="ghost" v-on:click="navigateTo('/login')">Login</Button>
             </div>
         </div>
     </div>
