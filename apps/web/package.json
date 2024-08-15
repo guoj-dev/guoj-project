@@ -4,6 +4,7 @@
   "dependencies": {
     "@elysiajs/eden": "^1.0.14",
     "@guoj/server": "workspace:*",
+    "@milkdown/crepe": "^7.5.0",
     "@nuxt/icon": "^1.0.0",
     "@pinia/nuxt": "^0.5.1",
     "@unocss/nuxt": "^0.61.3",
