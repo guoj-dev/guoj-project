@@ -9,5 +9,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@milkdown/prose": "^7.5.0"
+  }
 }

@@ -39,6 +39,14 @@
     </div>
 </template>
 <script setup lang="ts">
+import { Crepe } from '@milkdown/crepe'
+
+const crepe = new Crepe({
+
+})
+
+crepe.create()
+
 </script>
 <style scoped>
 </style>
