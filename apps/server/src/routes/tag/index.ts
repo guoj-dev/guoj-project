@@ -14,7 +14,8 @@ const route = useElysia({ prefix: "tag" })
         const res = await db.query.tags.findFirst({
             where: eq(tags.id, id),
         });
-        return res;
+        if (res) return res;
+        else throw new NotFoundException("Tag not found");
     });
 
 export default route;
