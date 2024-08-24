@@ -3,7 +3,6 @@ import {
     text,
     timestamp,
     pgTable,
-    integer,
     boolean,
     pgEnum,
     date,

@@ -3,7 +3,6 @@ import { tags } from "@/db/schema";
 import { NotFoundException } from "@/plugins/error/exceptions";
 import { useElysia } from "@/setup";
 import { eq } from "drizzle-orm";
-import { t } from "elysia";
 
 const route = useElysia({ prefix: "tag" })
     .get("/", async ({ logger }) => {

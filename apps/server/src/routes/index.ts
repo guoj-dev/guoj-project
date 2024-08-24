@@ -1,4 +1,3 @@
-import Elysia from "elysia";
 import user from "./user";
 import tag from "./tag";
 import problemset from "./problemset";
