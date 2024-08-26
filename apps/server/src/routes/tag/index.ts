@@ -5,11 +5,11 @@ import { useElysia } from "@/setup";
 import { eq } from "drizzle-orm";
 
 const route = useElysia({ prefix: "tag" })
-    .get("/", async ({ logger }) => {
+    .get("/", async ({ }) => {
         const res = await db.query.tags.findMany();
         return res;
     })
-    .get("/:id", async ({ params: { id }, logger }) => {
+    .get("/:id", async ({ params: { id }, }) => {
         const res = await db.query.tags.findFirst({
             where: eq(tags.id, id),
         });

@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import { t } from "elysia";
 
 export const problemset = useElysia({ prefix: "problemset" })
-    .get("/", async ({ logger }) => {
+    .get("/", async ({ }) => {
         try {
             const problemset = db.query.problemsets.findFirst();
             if (problemsets) return problemset;
@@ -17,7 +17,7 @@ export const problemset = useElysia({ prefix: "problemset" })
     })
     .get(
         "/:id",
-        async ({ params: { id }, logger }) => {
+        async ({ params: { id } }) => {
             try {
                 const problemset = db.query.problemsets.findFirst({
                     where: eq(problemsets.id, id),

@@ -14,7 +14,7 @@ const user = useElysia({ prefix: "user" })
   .get("", async () => {}, { tags: ["user"] })
   .get(
     "/:id",
-    async ({ params: { id }, logger }) => {
+    async ({ params: { id } }) => {
       const user = await db.query.users.findFirst({
         where: eq(users.id, id),
       });

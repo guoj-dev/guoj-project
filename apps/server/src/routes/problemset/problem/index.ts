@@ -8,7 +8,7 @@ import { problems, problemsets } from "@/db/schema";
 
 export const problem = useElysia({ prefix: "problem" }).get(
     "/:id",
-    async ({ params: { id }, logger }) => {
+    async ({ params: { id } }) => {
         const idSchema = z.string().uuid();
         try {
             if (idSchema.safeParse(id).success) {
