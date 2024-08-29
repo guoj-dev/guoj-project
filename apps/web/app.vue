@@ -3,14 +3,11 @@ import { ref, onMounted } from 'vue'
 import { navigationMenuTriggerStyle } from './components/ui/navigation-menu'
 import initUnocssRuntime from '@unocss/runtime'
 import {
-    defineConfig,
     presetAttributify,
     presetIcons,
     presetTypography,
     presetUno,
     presetWebFonts,
-    transformerDirectives,
-    transformerVariantGroup,
 } from "unocss";
 import presetAnimations from "unocss-preset-animations";
 import { builtinColors, presetShadcn } from "unocss-preset-shadcn";
