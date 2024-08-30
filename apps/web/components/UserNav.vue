@@ -62,10 +62,6 @@ const isLoggedin = computed(() => auth.isAuthed);
 
 const logout = () => { auth.logout()}
 
-const toLogin = () => {
-    router.push({ path: '/login' });
-}
-
 </script>
 
 <style scoped>
