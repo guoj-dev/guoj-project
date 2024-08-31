@@ -11,7 +11,7 @@ import { relations } from "drizzle-orm";
 import { users } from "./user.schema";
 import { problemTags } from "./problemset.schema";
 
-export const tagStatusEnum = pgEnum("tag_status", ["official", "approved", "pending", "graveyard"])
+export const tagStatusEnum = pgEnum("tag_status", ["official", "approved", "pending", "graveyard", "deleted"])
 
 export const tags = pgTable("tags", {
     id: uuid("id").primaryKey().defaultRandom(),
