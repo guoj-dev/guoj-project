@@ -25,9 +25,6 @@ onMounted(() => {
 
 initUnocssRuntime({
     defaults: {
-        shortcuts: [
-            // ...
-        ],
         theme: {
             colors: {
                 // ...
