@@ -3,8 +3,9 @@ import { relations } from "drizzle-orm";
 import { users } from "./user.schema";
 import { problems } from "./problemset.schema";
 
-export const discussions = pgTable("judgers", {
+export const discussions = pgTable("discussions", {
     id: uuid("id").primaryKey().defaultRandom(),
     name: text("name"),
-    
-})
+    content: text("content"),
+    userId: uuid("user_id").notNull().references(() => users.id),
+});
