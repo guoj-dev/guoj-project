@@ -52,10 +52,6 @@
 <script setup lang="ts">
 import { useAuthStore } from '~/store/auth';
 
-const router = useRouter()
-
-
-const auth = useAuthStore();
 
 definePageMeta({
     topbar: false
@@ -66,9 +62,6 @@ const email = ref('');
 const password = ref('');
 const confirmpassword = ref('');
 
-const back = () => {
-    navigateTo('/');
-}
 </script>
 
 <style scoped>
