@@ -52,15 +52,13 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
 import { useAuthStore } from '~/store/auth';
 
 const auth = useAuthStore();
 
-const router = useRouter()
 const isLoggedin = computed(() => auth.isAuthed);
 
-const logout = () => { auth.logout()}
+const logout = () => { auth.logout() }
 
 </script>
 
