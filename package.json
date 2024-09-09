@@ -11,6 +11,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@milkdown/kit": "^7.5.5",
     "@milkdown/prose": "^7.5.0"
   }
 }

@@ -33,19 +33,14 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-grow h-full w-full border shadow-2xl rounded-t-3xl mt-4">
+            <div class="flex-grow h-full w-full border shadow-2xl rounded-t-3xl mt-4 relative overflow-hidden">
+                <Editor></Editor>
             </div>
         </div>
     </div>
 </template>
 <script setup lang="ts">
-import { Crepe } from '@milkdown/crepe'
 
-const crepe = new Crepe({
-
-})
-
-crepe.create()
 
 </script>
 <style scoped>
