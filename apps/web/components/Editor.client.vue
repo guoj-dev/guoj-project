@@ -11,6 +11,10 @@ import "@milkdown/crepe/theme/frame.css";
 
 const milk = useTemplateRef("milk");
 
+const props = defineProps({
+  readonly: Boolean
+})
+
 onMounted(async () => {
     await nextTick()
     console.log(milk.value)
@@ -18,7 +22,8 @@ onMounted(async () => {
         root: milk.value,
         defaultValue: "# Hello World!"
     })
-    crepe.create()
+    crepe.create();
+    crepe.setReadonly(props.readonly);
 })
 
 </script> 
