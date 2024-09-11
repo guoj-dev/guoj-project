@@ -12,7 +12,8 @@ import "@milkdown/crepe/theme/frame.css";
 const milk = useTemplateRef("milk");
 
 const props = defineProps({
-  readonly: Boolean
+  readonly: Boolean,
+  defaultValue: String
 })
 
 onMounted(async () => {
@@ -20,7 +21,7 @@ onMounted(async () => {
     console.log(milk.value)
     const crepe = new Crepe({
         root: milk.value,
-        defaultValue: "# Hello World!"
+        defaultValue: props.defaultValue || "# Hello World!"
     })
     crepe.create();
     crepe.setReadonly(props.readonly);
