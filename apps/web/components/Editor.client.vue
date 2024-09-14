@@ -21,7 +21,7 @@ onMounted(async () => {
     console.log(milk.value)
     const crepe = new Crepe({
         root: milk.value,
-        defaultValue: props.defaultValue || "# Hello World!"
+        defaultValue: props.defaultValue || "# Hello World! \n ```cpp\n #include<iostream>\n```"
     })
     crepe.create();
     crepe.setReadonly(props.readonly);
@@ -29,6 +29,8 @@ onMounted(async () => {
 
 </script> 
 
-<style lang="css" scoped>
-
+<style lang="css">
+.ProseMirror {
+    padding: 1rem !important;
+}
 </style>

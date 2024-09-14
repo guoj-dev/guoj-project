@@ -12,29 +12,26 @@
                     </span>
                 </div>
                 <div class="mt-4 flex">
-                    <div class="pa-2 rounded-xl min-h-2rem min-w-8rem shadow-md flex items-center justify-center">
-                        <Avatar></Avatar>
-                        <div class="block ml-2">
-                            <p class="text-xl font-black">User</p>
-                            <p class="text-sm">Authorized Writer</p>
-                        </div>
-                    </div>
-                    <div class="pa-2 ml-2 rounded-xl min-h-2rem min-w-8rem bg-gradient-to-b from-blue-300 to-cyan-300 shadow-md flex items-center justify-center">
-                        <Icon name="fluent:clock-bill-16-filled" class="text-3xl left-1rem bg-gradient-to-br from-zinc-100 to-slate-200"></Icon>
-                        <span class="ml-2 bottom-.5rem right-.5rem text-xl font-black text-primary-foreground">Time: 1000ms</span>
-                    </div>
-                    <div class="pa-2 ml-2 rounded-xl min-h-2rem min-w-8rem bg-gradient-to-b from-purple-400 to-pink-300 shadow-md flex items-center justify-center">
-                        <Icon name="fluent:memory-16-filled" class="text-3xl top-.5rem left-1rem bg-gradient-to-br from-zinc-100 to-slate-200"></Icon>
-                        <span class="ml-2 bottom-.5rem right-.5rem text-xl font-black text-primary-foreground">Memory: 128MiB</span>
-                    </div>
-                    <div class="pa-2 ml-2 rounded-xl min-h-2rem min-w-8rem  bg-gradient-to-b from-yellow-200 to-orange-400 shadow-md flex items-center justify-center">
-                        <Icon name="fluent:balloon-12-filled" class="text-3xl top-.5rem left-1rem bg-gradient-to-br from-zinc-100 to-slate-200"></Icon>
-                        <span class="ml-2 bottom-.5rem right-.5rem text-xl font-black text-primary-foreground">Difficulty: ~100</span>
-                    </div>
+
                 </div>
             </div>
             <div class="flex-grow h-full w-full border shadow-2xl rounded-t-3xl mt-4 relative overflow-hidden">
-                <Editor></Editor>
+                <div class="mx-10 mt-8 font-medium text-xs">
+                    <span>P-1000</span>
+                    <span class="mx-2">/</span>
+                    <span>Description.md</span>
+                </div>
+                <div class="mx-8 flex">
+                    <Editor readonly class="flex-grow"></Editor>
+                    <div class="min-w-16rem flex flex-col">
+                        <div class="mt-16 bg-gray-100 rounded-xl py-8 px-4">
+                            <div>
+                                <p class="font-bold text-sm">Tags:</p>
+                                <p><span class="text-xs bg-blue text-light px-2 py-1 rounded-lg">Bruteforce</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -43,5 +40,4 @@
 
 
 </script>
-<style scoped>
-</style>
+<style scoped></style>
