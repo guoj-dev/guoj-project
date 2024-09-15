@@ -23,11 +23,74 @@
                 </div>
                 <div class="mx-8 flex">
                     <Editor readonly class="flex-grow"></Editor>
-                    <div class="min-w-16rem flex flex-col">
-                        <div class="mt-16 bg-gray-100 rounded-xl py-8 px-4">
+                    <div class="min-w-16rem flex flex-col mt-12">
+                        <div class="mt-4 bg-gray-100 rounded-xl pa-4">
                             <div>
-                                <p class="font-bold text-sm">Tags:</p>
-                                <p><span class="text-xs bg-blue text-light px-2 py-1 rounded-lg">Bruteforce</span></p>
+                                <p class="font-black text-md">Author</p>
+                                <div>       </div>
+                            </div>
+                        </div>
+                        <div class="divider mt-4 w-full border"></div>
+                        <div class="mt-4 bg-gray-100 rounded-xl pa-4">
+                            <div>
+                                <p class="font-bold text-sm">Tags</p>
+                                <p class="block break-words border-box max-w-16rem mt-1">
+                                    <span
+                                        class="inline-block text-xs bg-blue text-light px-2 py-1 rounded-lg mr-1 mb-1 inline-flex items-center justify-center">Approved</span>
+                                    <span
+                                        class="inline-block text-xs bg-blue text-light px-2 py-1 rounded-lg mr-1 mb-1 inline-flex items-center justify-center">Bruteforce</span>
+                                    <span
+                                        class="inline-block text-xs bg-blue text-light px-2 py-1 rounded-lg mr-1 mb-1 inline-flex items-center justify-center">Easy</span>
+                                    <span
+                                        class="inline-block text-xs bg-blue text-light px-2 py-1 rounded-lg mr-1 mb-1 inline-flex items-center justify-center">Programming
+                                        Basics</span>
+                                    <span
+                                        class="inline-block text-xs bg-blue text-light px-2 py-1 rounded-lg mr-1 mb-1 inline-flex items-center justify-center">Bruteforce</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider mt-4 w-full border"></div>
+                        <div class="mt-4 bg-gray-100 rounded-xl pa-4">
+                            <div>
+                                <p class="font-black text-md">Problem Settings</p>
+                                <p class="my-1">
+                                    <span class="text-xs bg-amber text-light px-2 py-1 font-bold rounded-lg inline-flex items-center justify-center mr-1">
+                                        🛠️ Input Setting Set :
+                                    </span>
+                                    <span
+                                        class="text-xs bg-cyan hover:bg-cyan-300 text-light px-2 py-1 font-bold rounded-lg inline-flex items-center justify-center">
+                                        Standard
+                                        <Icon name="ic:baseline-launch"></Icon>
+                                    </span>
+                                </p>
+                                <p class="my-1">
+                                    <span class="text-xs bg-emerald text-light px-2 py-1 font-bold rounded-lg inline-flex items-center justify-center mr-1">
+                                        🕗 Time Limit: 
+                                    </span>
+                                    <span
+                                        class="text-xs bg-orange text-light px-2 py-1 font-bold rounded-lg inline-flex items-center justify-center">
+                                        1000ms
+                                    </span>
+                                </p>
+                                <p class="my-1">
+                                    <span class="text-xs bg-fuchsia text-light px-2 py-1 font-bold rounded-lg inline-flex items-center justify-center mr-1">
+                                        🗃️ Memory Limit: 
+                                    </span>
+                                    <span
+                                        class="text-xs bg-red text-light px-2 py-1 font-bold rounded-lg inline-flex items-center justify-center">
+                                        128MiB
+                                    </span>
+                                </p>
+                                <p class="my-1">
+                                    <span class="text-xs bg-pink text-light px-2 py-1 font-bold rounded-lg inline-flex items-center justify-center mr-1">
+                                        🤖 Jury:
+                                    </span>
+                                    <span
+                                        class="text-xs bg-cyan-300 text-light px-2 py-1 font-bold rounded-lg inline-flex items-center justify-center">
+                                        Custom
+                                        <Icon name="ic:baseline-launch"></Icon>
+                                    </span>
+                                </p>
                             </div>
                         </div>
                     </div>
