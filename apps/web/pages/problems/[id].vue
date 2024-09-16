@@ -16,10 +16,22 @@
                 </div>
             </div>
             <div class="flex-grow h-full w-full border shadow-2xl rounded-t-3xl mt-4 relative overflow-hidden">
-                <div class="mx-10 mt-8 font-medium text-xs">
+                <div class="mx-10 mt-8 font-medium text-xs flex">
                     <span>P-1000</span>
                     <span class="mx-2">/</span>
                     <span>Description.md</span>
+                    <div class="flex-grow"></div>
+                    <div class="flex">
+                        <p class="pa-2 border rounded flex mx-1">
+                            <Icon name="fluent:options-16-filled" class="aspect-square"></Icon>
+                        </p>
+                        <p class="pa-2 border rounded flex mx-1">
+                            <Icon name="material-symbols:shield-person-rounded" class="aspect-square"></Icon>
+                        </p>
+                        <p class="pa-2 border rounded flex mx-1">
+                            <Icon name="fluent:edit-48-filled" class="aspect-square"></Icon>
+                        </p>
+                    </div>
                 </div>
                 <div class="mx-8 flex">
                     <Editor readonly class="flex-grow"></Editor>

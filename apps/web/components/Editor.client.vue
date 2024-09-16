@@ -7,7 +7,7 @@ import { useTemplateRef } from "vue"
 import { Crepe } from '@milkdown/crepe'
 import "@milkdown/crepe/theme/common/style.css";
 
-import "@milkdown/crepe/theme/frame.css";
+import "../styles/milkdown.css";
 
 const milk = useTemplateRef("milk");
 
@@ -32,5 +32,8 @@ onMounted(async () => {
 <style lang="css">
 .ProseMirror {
     padding: 1rem !important;
+}
+milkdown-code-block {
+    border-radius: 0.5rem;
 }
 </style>
