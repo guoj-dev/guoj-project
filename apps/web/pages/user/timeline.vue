@@ -1,7 +1,7 @@
 <template>
     <div class="container flex flex-col flex-grow h-full">
         <div class="flex flex-col flex-grow h-full w-full">
-            <div>
+            <div class="shadow-lg rounded-b-xl">
                 <div class="h-14rem border-x overflow-hidden relative">
 
                 </div>
