@@ -3,7 +3,7 @@
         <div class="grid grid-cols-8 flex-grow pt-16">
             <div class="col-span-2">
                 <div>
-                    <div class="aspect-square w-full bg-gray-200 rounded-full"></div>
+                    <div class="aspect-square w-full bg-gray-200 rounded-xl border shadow-lg"></div>
                     <div class="mt-4 mx-4">
                         <p class="font-bold text-xl">Username</p>
                         <p class="font-extralight text-lg">@Username</p>
