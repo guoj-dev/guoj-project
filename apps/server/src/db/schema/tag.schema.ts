@@ -1,7 +1,7 @@
 import { integer, json, pgEnum, pgTable, primaryKey, uuid, text } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { users } from "./user.schema";
-import { problemTags } from "./problemset.schema";
+import { problemTags, tagToProblemTag } from "./problemset.schema";
 
 export const tagStatusEnum = pgEnum("tag_status", ["official", "approved", "pending", "graveyard", "deleted"]);
 
