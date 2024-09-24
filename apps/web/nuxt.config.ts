@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     compatibilityDate: "2024-04-03",
     devtools: { enabled: true },
-    modules: ["shadcn-nuxt", "@unocss/nuxt", "@nuxt/icon", '@pinia/nuxt','@vueuse/motion/nuxt'],
+    modules: ["shadcn-nuxt", "@unocss/nuxt", "@nuxt/icon", '@pinia/nuxt','@vueuse/motion/nuxt','./modules/runtime'],
     css: ['@unocss/reset/tailwind.css', './assets/css/tailwind.css'],
     shadcn: {
         /**

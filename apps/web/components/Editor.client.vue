@@ -18,7 +18,6 @@ const props = defineProps({
 
 onMounted(async () => {
     await nextTick()
-    console.log(milk.value)
     const crepe = new Crepe({
         root: milk.value,
         defaultValue: props.defaultValue || "# Hello World! \n ```cpp\n #include<iostream>\n```"

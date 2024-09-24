@@ -1,16 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { navigationMenuTriggerStyle } from './components/ui/navigation-menu'
-import initUnocssRuntime from '@unocss/runtime'
-import {
-    presetAttributify,
-    presetIcons,
-    presetTypography,
-    presetUno,
-    presetWebFonts,
-} from "unocss";
-import presetAnimations from "unocss-preset-animations";
-import { builtinColors, presetShadcn } from "unocss-preset-shadcn";
 import { useAuthStore } from './store/auth';
 
 const auth = useAuthStore();
@@ -21,29 +11,6 @@ const session = useCookie('session')
 
 onMounted(() => {
     auth.refresh();
-})
-
-initUnocssRuntime({
-    defaults: {
-        theme: {
-            colors: {
-                // ...
-            },
-        },
-        presets: [
-            presetUno(),
-            presetAttributify(),
-            presetIcons(),
-            presetTypography(),
-            presetWebFonts({
-                fonts: {
-                    // ...
-                },
-            }),
-            presetAnimations(),
-            presetShadcn(builtinColors.map((c) => ({ color: c }))),
-        ],
-    }
 })
 
 </script>

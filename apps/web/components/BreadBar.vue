@@ -2,7 +2,6 @@
 import { type breadColor } from '@/store/bread'
 import uno from '../uno.config.js';
 
-console.log(uno.theme);
 
 interface BreadDisplay {
     icon?: string;
