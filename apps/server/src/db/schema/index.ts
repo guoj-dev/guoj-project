@@ -5,4 +5,5 @@ export * from './tag.schema';
 export * from './submission.schema';
 export * from './judger.schema';
 export * from "./discussion.schema";
-export * from "./contest.schema"
+export * from "./contest.schema";
+export * from "./rating.schema";
