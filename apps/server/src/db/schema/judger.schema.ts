@@ -4,17 +4,11 @@ import { users } from "./user.schema";
 import { problemsets } from "./problemset.schema";
 import { organizations } from "./organization.schema";
 
-export const judgerOwner = pgTable("judger_owner", {
-    id: uuid("id").primaryKey().defaultRandom(),
-    userId: uuid("user_id").references(() => users.id),
-    organizationId: uuid("organization_id").references(() => organizations.id),
-});
-
 export const judgers = pgTable("judgers", {
     id: uuid("id").primaryKey().defaultRandom(),
     name: text("name"),
     token: text("token"),
-    owner: uuid("owner").references(() => judgerOwner.id, { onDelete: "cascade" }),
+    ownerId: uuid("owner_id"),
     assignmentId: uuid("assignment_id").references(() => judgerAssignment.id, { onDelete: "cascade" }),
 });
 
@@ -36,3 +30,15 @@ export const assignmentToProblemset = pgTable(
         pk: primaryKey({ columns: [t.assignmentId, t.problemsetId] }),
     })
 );
+
+export const judgerRelations = relations(judgers, ({ one, many }) => ({
+    assignment: one(judgerAssignment),
+    userOwner: one(users, {
+        fields: [judgers.ownerId],
+        references: [users.id],
+    }),
+    organizationOwner: one(organizations, {
+        fields: [judgers.ownerId],
+        references: [organizations.id],
+    }),
+}));

@@ -1,20 +1,10 @@
-import {
-    uuid,
-    text,
-    timestamp,
-    pgTable,
-    boolean,
-    pgEnum,
-    date,
-} from "drizzle-orm/pg-core";
+import { uuid, text, timestamp, pgTable, boolean, pgEnum, date } from "drizzle-orm/pg-core";
 import { relations, sql } from "drizzle-orm";
 import { organizationMember } from "./organization.schema";
-import {
-    problemCollaborations,
-    problemsetCollaborations,
-    problemsets,
-} from "./problemset.schema";
+import { problemCollaborations, problemsetCollaborations, problemsets } from "./problemset.schema";
 import { submissions } from "./submission.schema";
+import { contests } from "./contest.schema";
+import { ratings } from "./rating.schema";
 
 export const globalRoleEnum = pgEnum("global_role", ["user", "admin"]);
 
@@ -50,6 +40,8 @@ export const userRelations = relations(users, ({ one, many }) => ({
     problemsetCollaborations: many(problemsetCollaborations),
     organizationMember: many(organizationMember),
     submissions: many(submissions),
+    contests: many(contests),
+    rating: one(ratings),
 }));
 
 export const authStrategyEnum = pgEnum("auth_strategy", ["password"]);

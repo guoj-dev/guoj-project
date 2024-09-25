@@ -1,4 +1,4 @@
-import { real, json, pgEnum, pgTable, uuid, text } from "drizzle-orm/pg-core";
+import { real, json, pgEnum, pgTable, uuid, text, timestamp } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { users } from "./user.schema";
 import { problems } from "./problemset.schema";
@@ -21,6 +21,7 @@ export const submissions = pgTable("submissions", {
     problem: uuid("problem").references(() => problems.id, {
         onDelete: "cascade",
     }),
+    submitAt: timestamp("submit_at").defaultNow(),
     code: text("code"),
     score: real("score").default(0),
     status: submissionStatus("status"),
