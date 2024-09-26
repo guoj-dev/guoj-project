@@ -2,14 +2,14 @@ import { error, t } from "elysia";
 import { isValidEmail, lucia } from "../../../utils/auth";
 import { db } from "../../../db";
 import { users } from "../../../db/schema";
-import * as schema from "@/db/schema";
+import * as schema from "../../../db/schema";
 import { eq } from "drizzle-orm";
 import {
   BadRequestException,
   ConflictException,
   InternalServerErrorException,
 } from "@/plugins/error/exceptions";
-import { useElysia } from "@/setup";
+import { useElysia } from "../../../setup";
 import { generateId } from "lucia";
 
 const auth = useElysia({ prefix: "auth" })

@@ -1,12 +1,12 @@
-import { useElysia } from "@/setup";
+import { useElysia } from "../../setup";
 import { t } from "elysia";
 import auth from "./auth";
-import { authGuard } from "@/plugins/authGuard";
+import { authGuard } from "../../plugins/authGuard";
 import { me } from "./me";
-import { db } from "@/db";
+import { db } from "../../db";
 import { eq } from "drizzle-orm";
-import { users } from "@/db/schema";
-import { NotFoundException } from "@/plugins/error/exceptions";
+import { users } from "../../db/schema";
+import { NotFoundException } from "../../plugins/error/exceptions";
 
 const user = useElysia({ prefix: "user" })
   .use(me)

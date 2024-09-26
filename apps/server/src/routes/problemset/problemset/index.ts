@@ -1,7 +1,7 @@
-import { db } from "@/db";
-import { problemsets } from "@/db/schema";
-import { NotFoundException } from "@/plugins/error/exceptions";
-import { useElysia } from "@/setup";
+import { db } from "../../../db";
+import { problemsets } from "../../../db/schema";
+import { NotFoundException } from "../../../plugins/error/exceptions";
+import { useElysia } from "../../../setup";
 import { eq } from "drizzle-orm";
 import { t } from "elysia";
 

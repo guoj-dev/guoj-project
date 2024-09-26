@@ -3,7 +3,7 @@ import { routes } from "./routes";
 import { config } from "./plugins/config";
 import { swagger } from "@elysiajs/swagger";
 import serverTiming from "@elysiajs/server-timing";
-import logger from "@/utils/logger";
+import logger from "./utils/logger";
 
 
 export const app = elysia()

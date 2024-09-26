@@ -1,4 +1,4 @@
-import { useElysia } from "@/setup";
+import { useElysia } from "../../setup";
 import { problemset } from "./problemset";
 import { problem } from "./problem";
 

@@ -1,10 +1,10 @@
-import { useElysia } from "@/setup";
+import { useElysia } from "../../../setup";
 import { t } from "elysia";
-import { db } from "@/db";
-import { NotFoundException } from "@/plugins/error/exceptions";
+import { db } from "../../../db";
+import { NotFoundException } from "../../../plugins/error/exceptions";
 import { z } from "zod";
 import { eq, and } from "drizzle-orm";
-import { problems, problemsets } from "@/db/schema";
+import { problems, problemsets } from "../../../db/schema";
 
 export const problem = useElysia({ prefix: "problem" }).get(
     "/:id",

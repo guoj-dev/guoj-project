@@ -1,8 +1,8 @@
 import { Elysia, type ElysiaConfig } from "elysia";
-import { env } from "@/plugins/env";
-import { configPlugin } from "@/plugins/config";
-import { db } from "@/db";
-import logger from "@/utils/logger";
+import { env } from "./plugins/env";
+import { configPlugin } from "./plugins/config";
+import { db } from "./db";
+import logger from "./utils/logger";
 
 
 const elysia = <

@@ -1,7 +1,7 @@
-import { db } from "@/db";
-import { tags } from "@/db/schema";
-import { NotFoundException } from "@/plugins/error/exceptions";
-import { useElysia } from "@/setup";
+import { db } from "../../db";
+import { tags } from "../../db/schema";
+import { NotFoundException } from "../../plugins/error/exceptions";
+import { useElysia } from "../../setup";
 import { eq } from "drizzle-orm";
 
 const route = useElysia({ prefix: "tag" })

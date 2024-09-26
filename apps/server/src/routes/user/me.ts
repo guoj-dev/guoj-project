@@ -1,5 +1,5 @@
-import { useElysia } from "@/setup";
-import { authGuard } from "@/plugins/authGuard";
+import { useElysia } from "../../setup";
+import { authGuard } from "../../plugins/authGuard";
 
 export const me = useElysia({ prefix: '/me'})
   .use(authGuard)
