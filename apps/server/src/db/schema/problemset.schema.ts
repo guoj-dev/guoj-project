@@ -10,6 +10,7 @@ import { submissions } from "./submission.schema";
 export const problemPermission = pgEnum("problem_permission", ["P", "RO", "R"]);
 // P for Private or Protected, only collaborators or owners can view or edit the problem, RO for view the problem body only and no submissions.
 
+export const problemsetStatus = pgEnum("problemset_status", ["O", "A", "P", "p", "h"]) // Official, Authorized, Public, Private, Hidden
 export const problemCollaborationPermission = pgEnum("problem_collaboration_permission", ["RO", "R", "RW", "RWA"]); // The owner of the problem has RWA permission by default.
 export const problemsetCollaborationPermission = pgEnum("problem_collaboration_permission", ["RO", "R", "RW", "RWA"]);
 /* 
@@ -95,6 +96,7 @@ export const problemsets = pgTable("problemset", {
     config: json("config"),
     prefix: text("prefix"),
     ownerId: uuid("owner_id"),
+    problemsetStatus: problemsetStatus("problemset_status")
 });
 
 export const problemsetCollaborations = pgTable("problemset_collaborations", {
