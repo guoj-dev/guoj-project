@@ -4,7 +4,7 @@ import { users } from "./user.schema";
 import { contestResults } from "./contest.schema";
 
 export const ratings = pgTable("ratings", {
-    id: uuid("id").notNull().defaultRandom(),
+    id: uuid("id").primaryKey().notNull().defaultRandom(),
     userId: uuid("user_id")
         .notNull()
         .references(() => users.id),
@@ -12,7 +12,7 @@ export const ratings = pgTable("ratings", {
 });
 
 export const ratingMutations = pgTable("ratingMutations", {
-    id: uuid("id").notNull().defaultRandom(),
+    id: uuid("id").primaryKey().notNull().defaultRandom(),
     ratingId: uuid("rating_id")
         .notNull()
         .references(() => ratings.id),
